@@ -1,0 +1,25 @@
+Take my existing static site (index.html, styles.css, and script.js) and refactor it to support 3 distinct visual themes on a single page using CSS custom properties (design tokens), without changing the core HTML layout structure.
+
+1. Create these 3 themes:
+
+Theme 1: Warm Modern (Current) — Soft cream background (#FAF7F5), white cards, rounded corners (24px), pill buttons/badges, terracotta accents (#C89F8D), Plus Jakarta Sans font.
+
+Theme 2: Classic Broadsheet — Crisp off-white/paper background, sharp 0–4px corners, thin hairline borders instead of drop shadows, deep crimson/navy accents, and a serif headline font paired with a clean sans-serif body font.
+
+Theme 3: Dark Editorial — Deep charcoal/obsidian background (#121212), dark elevated cards (#1E1E1E), subtle borders, warm amber/gold accents, high-contrast light text.
+
+2. Build a floating Theme Switcher UI:
+
+Add a compact, sleek floating theme-switcher bar at the top or bottom-left of the screen so a reviewer can switch between all 3 themes with one click.
+
+Show each theme's name and a small color swatch preview inside its button, and highlight the active theme.
+
+Save the selected theme in localStorage so it persists on page refresh, and also support URL query parameters (like ?theme=broadsheet) so I can send direct links to specific themes.
+
+Include a small "Hide Bar" toggle on the switcher so my friend can view the page cleanly without the switcher blocking anything.
+
+3. Keep everything static:
+
+Load any needed Google Fonts cleanly in index.html.
+
+Ensure the existing category filter, search bar, and subscribe modal work seamlessly across all 3 themes.

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="warm-modern">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nile Root</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Floating Theme Switcher Bar (Bottom-Left) -->
+  <aside class="theme-switcher-container" id="themeSwitcherContainer" aria-label="Theme switcher">
+    <div class="theme-switcher-bar" id="themeSwitcherBar">
+      <div class="switcher-header">
+        <span class="switcher-label">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          Theme
+        </span>
+        <button class="switcher-hide-btn" id="hideSwitcherBtn" aria-label="Hide theme switcher" title="Hide Bar">
+          <span>Hide</span> &times;
+        </button>
+      </div>
+
+      <div class="switcher-options" role="radiogroup" aria-label="Select visual theme">
+        <button type="button" class="theme-btn active" data-theme-id="warm-modern" role="radio" aria-checked="true">
+          <span class="swatch" style="--swatch-bg: #FAF7F5; --swatch-accent: #C89F8D;"></span>
+          <span class="theme-name">Warm Modern</span>
+        </button>
+
+        <button type="button" class="theme-btn" data-theme-id="broadsheet" role="radio" aria-checked="false">
+          <span class="swatch" style="--swatch-bg: #F4F1EA; --swatch-accent: #8E1616;"></span>
+          <span class="theme-name">Classic Broadsheet</span>
+        </button>
+
+        <button type="button" class="theme-btn" data-theme-id="dark-editorial" role="radio" aria-checked="false">
+          <span class="swatch" style="--swatch-bg: #121212; --swatch-accent: #D4AF37;"></span>
+          <span class="theme-name">Dark Editorial</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Collapsed pill when hidden -->
+    <button class="theme-switcher-pill" id="showSwitcherBtn" aria-label="Show theme switcher" title="Show theme switcher">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+      <span>Theme</span>
+    </button>
+  </aside>
+
+  <!-- Top Header (Layout: African Exponent | Style: Nova Studio) -->
+  <header class="site-header">
+    <div class="container header-top">
+      <div class="header-left">
+        <button class="icon-btn" id="menuToggle" aria-label="Toggle Menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+        <button class="icon-btn" id="searchToggle" aria-label="Search">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+      </div>
+
+      <a href="#" class="brand-logo">
+        <span class="brand-main">Nile</span> <span class="brand-accent">Root</span>
+      </a>
+
+      <div class="header-right">
+        <a href="#" class="social-pill" aria-label="Facebook">f</a>
+        <a href="#" class="social-pill" aria-label="X / Twitter">𝕏</a>
+        <a href="#" class="social-pill" aria-label="LinkedIn">in</a>
+        <a href="#" class="social-pill" aria-label="Instagram">ig</a>
+      </div>
+    </div>
+
+    <!-- Search Bar Dropdown -->
+    <div class="search-drawer" id="searchDrawer">
+      <div class="container search-inner">
+        <input type="text" id="searchInput" placeholder="Search articles, countries, or topics..." />
+        <button class="btn-dark btn-sm" id="clearSearch">Clear</button>
+      </div>
+    </div>
+
+    <!-- Category Navigation Bar -->
+    <nav class="category-nav" id="categoryNav">
+      <div class="container nav-scroll">
+        <button class="nav-pill active" data-category="all">Home</button>
+        <button class="nav-pill" data-category="Governance">Governance</button>
+        <button class="nav-pill" data-category="Security">Security</button>
+        <button class="nav-pill" data-category="Technology">Technology</button>
+        <button class="nav-pill" data-category="Colonialism">Colonialism</button>
+        <button class="nav-pill" data-category="Development">Development</button>
+        <button class="nav-pill" data-category="Neocolonialism">Neocolonialism</button>
+        <button class="nav-pill" data-category="Arts & Culture">Arts &amp; Culture</button>
+        <button class="nav-pill" data-category="Startups">Startups</button>
+        <button class="nav-pill" data-category="Travel">Travel</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content Grid (2-Column News Feed + 1-Column Sidebar) -->
+  <main class="container main-layout">
+    
+    <!-- Left 2 Columns: Article Cards -->
+    <section class="articles-grid" id="articlesGrid">
+      
+      <article class="article-card" data-category="Development">
+        <div class="card-media">
+          <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=800&q=80" alt="Zimbabwean Migration" />
+          <span class="badge-tag">South Africa</span>
+        </div>
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="meta-dot"></span>
+            <time>May 16, 2024</time>
+          </div>
+          <h2 class="card-title">The Complex Reality of Zimbabwean Migration to South Africa</h2>
+          <p class="card-excerpt">Over a million Zimbabweans have relocated to South Africa, seeking relief and opportunities absent in their homeland...</p>
+          <a href="#" class="btn-dark">Read More <span>&rarr;</span></a>
+        </div>
+      </article>
+
+      <article class="article-card" data-category="Governance">
+        <div class="card-media">
+          <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=800&q=80" alt="Courtroom Report" />
+          <span class="badge-tag">Uganda</span>
+        </div>
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="meta-dot"></span>
+            <time>May 15, 2024</time>
+          </div>
+          <h2 class="card-title">Man Remanded for Trespassing on President Museveni's Residence</h2>
+          <p class="card-excerpt">According to the state prosecutor, Bwanika's actions were intended to annoy President Museveni, an allegation that led to intervention...</p>
+          <a href="#" class="btn-dark">Read More <span>&rarr;</span></a>
+        </div>
+      </article>
+
+      <article class="article-card" data-category="Development">
+        <div class="card-media">
+          <img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=800&q=80" alt="Infrastructure in Ivory Coast" />
+          <span class="badge-tag">Ivory Coast</span>
+        </div>
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="meta-dot"></span>
+            <time>May 14, 2024</time>
+          </div>
+          <h2 class="card-title">Climate Resilience and Urban Infrastructure in Abidjan's Coastal Districts</h2>
+          <p class="card-excerpt">Rapid urban growth meets seasonal flooding as local engineers pioneer sustainable drainage and resilient road networks...</p>
+          <a href="#" class="btn-dark">Read More <span>&rarr;</span></a>
+        </div>
+      </article>
+
+      <article class="article-card" data-category="Security">
+        <div class="card-media">
+          <img src="https://images.unsplash.com/photo-1523805009345-7448845a9e53?auto=format&fit=crop&w=800&q=80" alt="South Sudan Peace Talks" />
+          <span class="badge-tag">South Sudan</span>
+        </div>
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="meta-dot"></span>
+            <time>May 13, 2024</time>
+          </div>
+          <h2 class="card-title">Regional Mediators Push for Renewed Dialogue Ahead of Elections</h2>
+          <p class="card-excerpt">Diplomatic envoys gather in Juba to solidify security arrangements and bolster economic stability across border regions...</p>
+          <a href="#" class="btn-dark">Read More <span>&rarr;</span></a>
+        </div>
+      </article>
+
+    </section>
+
+    <!-- Right Column: Sidebar (Stay Connected + Featured News) -->
+    <aside class="sidebar">
+      
+      <!-- Stay Connected Card -->
+      <div class="sidebar-card">
+        <div class="section-pill">
+          <span class="pill-dot"></span>
+          <span>Stay Connected</span>
+        </div>
+        <h3 class="sidebar-heading">Follow Our <span class="text-muted-accent">Coverage</span></h3>
+        <div class="sidebar-socials">
+          <a href="#" class="social-circle" aria-label="Facebook">f</a>
+          <a href="#" class="social-circle" aria-label="Twitter">𝕏</a>
+          <a href="#" class="social-circle" aria-label="LinkedIn">in</a>
+          <a href="#" class="social-circle" aria-label="Instagram">ig</a>
+        </div>
+      </div>
+
+      <!-- Featured News List -->
+      <div class="sidebar-card">
+        <div class="section-pill">
+          <span class="pill-dot"></span>
+          <span>Editor's Picks</span>
+        </div>
+        <h3 class="sidebar-heading">Featured <span class="text-muted-accent">News</span></h3>
+
+        <div class="featured-list">
+          <a href="#" class="featured-item">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80" alt="Portrait" />
+            <div class="featured-info">
+              <h4>A Lifetime in Limbo as Man is told he is NOT British After 70 years</h4>
+              <span class="featured-date">May 16, 2024</span>
+            </div>
+          </a>
+
+          <a href="#" class="featured-item">
+            <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=200&q=80" alt="Migration" />
+            <div class="featured-info">
+              <h4>The Complex Reality of Zimbabwean Migration to South Africa</h4>
+              <span class="featured-date">May 16, 2024</span>
+            </div>
+          </a>
+
+          <a href="#" class="featured-item">
+            <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=200&q=80" alt="Court" />
+            <div class="featured-info">
+              <h4>Man Remanded for Trespassing on President Museveni's Residence</h4>
+              <span class="featured-date">May 15, 2024</span>
+            </div>
+          </a>
+
+          <a href="#" class="featured-item">
+            <img src="https://images.unsplash.com/photo-1531384441138-2736e62e0919?auto=format&fit=crop&w=200&q=80" alt="Court Case" />
+            <div class="featured-info">
+              <h4>Bail Denied for Suspects in South African Rapper AKA's Murder Case</h4>
+              <span class="featured-date">May 14, 2024</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+    </aside>
+  </main>
+
+  <!-- Floating Subscribe Pill Button (Bottom-Right from African Exponent, styled like Nova Studio) -->
+  <button class="floating-subscribe" id="openSubscribe">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+    <span>Subscribe</span>
+  </button>
+
+  <!-- Subscribe Modal -->
+  <div class="modal-backdrop" id="subscribeModal">
+    <div class="modal-card">
+      <button class="modal-close" id="closeSubscribe">&times;</button>
+      <div class="section-pill">
+        <span class="pill-dot"></span>
+        <span>Stay in the loop</span>
+      </div>
+      <h2>Get the Latest <span class="text-muted-accent">Insights</span></h2>
+      <p>Weekly briefings on African governance, startups, and culture delivered straight to your inbox.</p>
+      <form id="subscribeForm" class="subscribe-form">
+        <input type="email" placeholder="Your email address" required />
+        <button type="submit" class="btn-peach">Subscribe <span>&rarr;</span></button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
