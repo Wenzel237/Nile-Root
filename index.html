@@ -84,16 +84,9 @@
     <!-- Category Navigation Bar -->
     <nav class="category-nav" id="categoryNav">
       <div class="container nav-scroll">
-        <button class="nav-pill active" data-category="all">Home</button>
-        <button class="nav-pill" data-category="Governance">Governance</button>
-        <button class="nav-pill" data-category="Security">Security</button>
-        <button class="nav-pill" data-category="Technology">Technology</button>
-        <button class="nav-pill" data-category="Colonialism">Colonialism</button>
-        <button class="nav-pill" data-category="Development">Development</button>
-        <button class="nav-pill" data-category="Neocolonialism">Neocolonialism</button>
-        <button class="nav-pill" data-category="Arts & Culture">Arts &amp; Culture</button>
-        <button class="nav-pill" data-category="Startups">Startups</button>
-        <button class="nav-pill" data-category="Travel">Travel</button>
+        <button class="nav-pill active" data-category="News">News</button>
+        <button class="nav-pill" data-category="Culture">Culture</button>
+        <button class="nav-pill" data-category="Current Affairs">Current Affairs</button>
       </div>
     </nav>
   </header>
@@ -104,66 +97,101 @@
     <!-- Left 2 Columns: Article Cards -->
     <section class="articles-grid" id="articlesGrid">
       
-      <article class="article-card" data-category="Development">
+      <!-- News Articles -->
+      <article class="article-card" data-category="News">
         <div class="card-media">
-          <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=800&q=80" alt="Zimbabwean Migration" />
-          <span class="badge-tag">South Africa</span>
+          <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=800&q=80" alt="East African Community Railway Summit" />
+          <span class="badge-tag">Kenya &amp; Uganda</span>
+        </div>
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="meta-dot"></span>
+            <time>May 24, 2024</time>
+          </div>
+          <h2 class="card-title">Kenya and Uganda Secure Joint Financing to Extend Standard Gauge Railway to Malaba</h2>
+          <p class="card-excerpt">Transport ministers in Nairobi and Kampala finalize cross-border financing to push the high-capacity freight line into eastern Uganda, slashing transit times from Mombasa...</p>
+          <a href="#" class="btn-dark">Read More <span>&rarr;</span></a>
+        </div>
+      </article>
+
+      <article class="article-card" data-category="News">
+        <div class="card-media">
+          <img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=800&q=80" alt="Geothermal Plant in Olkaria Rift Valley" />
+          <span class="badge-tag">Rift Valley</span>
+        </div>
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="meta-dot"></span>
+            <time>May 22, 2024</time>
+          </div>
+          <h2 class="card-title">East African Power Pool Accelerates Cross-Border Clean Energy Transmission</h2>
+          <p class="card-excerpt">Tanzania synchronizes regional grids with Ethiopia and Kenya, marking a historic leap in geothermal and hydroelectric energy trading across the Great Lakes basin...</p>
+          <a href="#" class="btn-dark">Read More <span>&rarr;</span></a>
+        </div>
+      </article>
+
+      <!-- Culture Articles -->
+      <article class="article-card" data-category="Culture">
+        <div class="card-media">
+          <img src="https://images.unsplash.com/photo-1523805009345-7448845a9e53?auto=format&fit=crop&w=800&q=80" alt="Kigali Fashion and Design Scene" />
+          <span class="badge-tag">Rwanda</span>
+        </div>
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="meta-dot"></span>
+            <time>May 20, 2024</time>
+          </div>
+          <h2 class="card-title">The Revival of Imigongo and Natural Pigments in Kigali's Contemporary Design</h2>
+          <p class="card-excerpt">A new generation of Rwandan visual artists and architects is blending geometric cow-dung relief traditions with modernist aesthetics, captivating international galleries...</p>
+          <a href="#" class="btn-dark">Read More <span>&rarr;</span></a>
+        </div>
+      </article>
+
+      <article class="article-card" data-category="Culture">
+        <div class="card-media">
+          <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=800&q=80" alt="Zanzibar Heritage and Taarab Music" />
+          <span class="badge-tag">Tanzania</span>
+        </div>
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="meta-dot"></span>
+            <time>May 18, 2024</time>
+          </div>
+          <h2 class="card-title">Stone Town's Taarab Ensembles Find New Rhythm Among Swahili Coast Youth</h2>
+          <p class="card-excerpt">Merging classical Arabic-influenced Swahili poetry with modern Afro-fusion beats, young musicians in Zanzibar keep coastal heritage alive on global streaming platforms...</p>
+          <a href="#" class="btn-dark">Read More <span>&rarr;</span></a>
+        </div>
+      </article>
+
+      <!-- Current Affairs Articles -->
+      <article class="article-card" data-category="Current Affairs">
+        <div class="card-media">
+          <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=800&q=80" alt="East African Community Summit in Arusha" />
+          <span class="badge-tag">EAC Secretariat</span>
         </div>
         <div class="card-body">
           <div class="card-meta">
             <span class="meta-dot"></span>
             <time>May 16, 2024</time>
           </div>
-          <h2 class="card-title">The Complex Reality of Zimbabwean Migration to South Africa</h2>
-          <p class="card-excerpt">Over a million Zimbabweans have relocated to South Africa, seeking relief and opportunities absent in their homeland...</p>
+          <h2 class="card-title">Arusha Summit Tackles Single Currency Roadmap and Cross-Border Tariffs</h2>
+          <p class="card-excerpt">Heads of state assemble at the EAC headquarters to harmonize fiscal convergence criteria and address remaining non-tariff trade barriers between member nations...</p>
           <a href="#" class="btn-dark">Read More <span>&rarr;</span></a>
         </div>
       </article>
 
-      <article class="article-card" data-category="Governance">
+      <article class="article-card" data-category="Current Affairs">
         <div class="card-media">
-          <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=800&q=80" alt="Courtroom Report" />
-          <span class="badge-tag">Uganda</span>
-        </div>
-        <div class="card-body">
-          <div class="card-meta">
-            <span class="meta-dot"></span>
-            <time>May 15, 2024</time>
-          </div>
-          <h2 class="card-title">Man Remanded for Trespassing on President Museveni's Residence</h2>
-          <p class="card-excerpt">According to the state prosecutor, Bwanika's actions were intended to annoy President Museveni, an allegation that led to intervention...</p>
-          <a href="#" class="btn-dark">Read More <span>&rarr;</span></a>
-        </div>
-      </article>
-
-      <article class="article-card" data-category="Development">
-        <div class="card-media">
-          <img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=800&q=80" alt="Infrastructure in Ivory Coast" />
-          <span class="badge-tag">Ivory Coast</span>
+          <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=800&q=80" alt="Lake Victoria Fishery Management" />
+          <span class="badge-tag">Great Lakes</span>
         </div>
         <div class="card-body">
           <div class="card-meta">
             <span class="meta-dot"></span>
             <time>May 14, 2024</time>
           </div>
-          <h2 class="card-title">Climate Resilience and Urban Infrastructure in Abidjan's Coastal Districts</h2>
-          <p class="card-excerpt">Rapid urban growth meets seasonal flooding as local engineers pioneer sustainable drainage and resilient road networks...</p>
-          <a href="#" class="btn-dark">Read More <span>&rarr;</span></a>
-        </div>
-      </article>
-
-      <article class="article-card" data-category="Security">
-        <div class="card-media">
-          <img src="https://images.unsplash.com/photo-1523805009345-7448845a9e53?auto=format&fit=crop&w=800&q=80" alt="South Sudan Peace Talks" />
-          <span class="badge-tag">South Sudan</span>
-        </div>
-        <div class="card-body">
-          <div class="card-meta">
-            <span class="meta-dot"></span>
-            <time>May 13, 2024</time>
-          </div>
-          <h2 class="card-title">Regional Mediators Push for Renewed Dialogue Ahead of Elections</h2>
-          <p class="card-excerpt">Diplomatic envoys gather in Juba to solidify security arrangements and bolster economic stability across border regions...</p>
+          <h2 class="card-title">Safeguarding Lake Victoria: Tri-Nation Pact on Sustainable Blue Economy</h2>
+          <p class="card-excerpt">Kenya, Uganda, and Tanzania deploy collaborative satellite monitoring and community patrols to curb illegal fishing and restore endangered tilapia nursery zones...</p>
           <a href="#" class="btn-dark">Read More <span>&rarr;</span></a>
         </div>
       </article>
@@ -198,34 +226,34 @@
 
         <div class="featured-list">
           <a href="#" class="featured-item">
-            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80" alt="Portrait" />
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80" alt="Nairobi Tech Ecosystem" />
             <div class="featured-info">
-              <h4>A Lifetime in Limbo as Man is told he is NOT British After 70 years</h4>
-              <span class="featured-date">May 16, 2024</span>
+              <h4>Silicon Savannah: Nairobi Agri-Tech Startups Attract Record Seed Rounds</h4>
+              <span class="featured-date">May 24, 2024</span>
             </div>
           </a>
 
           <a href="#" class="featured-item">
-            <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=200&q=80" alt="Migration" />
+            <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=200&q=80" alt="SGR Extension" />
             <div class="featured-info">
-              <h4>The Complex Reality of Zimbabwean Migration to South Africa</h4>
-              <span class="featured-date">May 16, 2024</span>
+              <h4>Kenya and Uganda Advance Unified Malaba Border Railway Link</h4>
+              <span class="featured-date">May 22, 2024</span>
             </div>
           </a>
 
           <a href="#" class="featured-item">
-            <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=200&q=80" alt="Court" />
+            <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=200&q=80" alt="Zanzibar Heritage" />
             <div class="featured-info">
-              <h4>Man Remanded for Trespassing on President Museveni's Residence</h4>
+              <h4>Preserving Swahili Coastal Architecture Across Lamu and Stone Town</h4>
+              <span class="featured-date">May 19, 2024</span>
+            </div>
+          </a>
+
+          <a href="#" class="featured-item">
+            <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=200&q=80" alt="EAC Arusha Summit" />
+            <div class="featured-info">
+              <h4>EAC Common Market: New Protocols Clear Cross-Border Labor Mobility</h4>
               <span class="featured-date">May 15, 2024</span>
-            </div>
-          </a>
-
-          <a href="#" class="featured-item">
-            <img src="https://images.unsplash.com/photo-1531384441138-2736e62e0919?auto=format&fit=crop&w=200&q=80" alt="Court Case" />
-            <div class="featured-info">
-              <h4>Bail Denied for Suspects in South African Rapper AKA's Murder Case</h4>
-              <span class="featured-date">May 14, 2024</span>
             </div>
           </a>
         </div>

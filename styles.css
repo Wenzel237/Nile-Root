@@ -241,6 +241,7 @@ h1, h2, h3, h4 {
   color: var(--text-primary);
   font-weight: var(--heading-weight);
   letter-spacing: var(--heading-letter-spacing);
+  cursor: default;
 }
 
 .container {
